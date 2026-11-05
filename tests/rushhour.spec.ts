@@ -243,6 +243,59 @@ test('shows and independently inspects real BFS and A* branches at the same sear
   await expect(page.getByRole('button', { name: 'Replay A* solution' })).toBeEnabled();
 });
 
+test('expands one search without resetting playback or the hidden lane', async ({ page }, testInfo) => {
+  await openSite(page);
+  await openSearch(page);
+  await page.getByRole('button', { name: 'Search trees' }).click();
+  const bfs = page.getByRole('article', { name: 'Breadth-first search', exact: true });
+  const astar = page.getByRole('article', { name: 'A* search', exact: true });
+  const expandAstar = astar.getByRole('button', { name: 'A* search Expand', exact: true });
+  const showBoth = astar.getByRole('button', { name: 'A* search Show both algorithms', exact: true });
+  const bfsPicker = bfs.getByRole('combobox', { name: 'Inspect a position' });
+  const bfsExpanded = page.getByTestId('bfs-expanded');
+  const astarExpanded = page.getByTestId('astar-expanded');
+  const next = page.getByRole('button', { name: 'Next step' });
+
+  await expect(bfs.getByRole('button', { name: 'Breadth-first search Expand', exact: true })).toHaveAttribute('aria-expanded', 'false');
+  await expect(expandAstar).toHaveAttribute('aria-expanded', 'false');
+  await next.click();
+  await expect(astarExpanded).toHaveText('1');
+  await next.click();
+  await expect(bfsPicker).toHaveValue('1');
+  await bfsPicker.selectOption('0');
+  await bfs.getByRole('button', { name: 'Zoom in', exact: true }).click();
+  await expect(bfs.getByLabel('Tree zoom')).toHaveText('125%');
+  const pairedWidth = (await astar.boundingBox())!.width;
+  const diagram = astar.getByRole('region', { name: 'A* diagram', exact: true });
+  const pairedHeight = (await diagram.boundingBox())!.height;
+
+  await expandAstar.press('Enter');
+  await expect(showBoth).toHaveAttribute('aria-expanded', 'true');
+  await expect(showBoth).toBeFocused();
+  await expect(bfsExpanded).toBeAttached();
+  await expect(bfsExpanded).toBeHidden();
+  await expect.poll(async () => (await astar.boundingBox())?.width ?? 0).toBeGreaterThan(pairedWidth * 1.5);
+  await expect.poll(async () => (await diagram.boundingBox())?.height ?? 0).toBeGreaterThan(pairedHeight);
+  await expect(page.getByText('Search paused', { exact: true })).toBeVisible();
+  await expect(astarExpanded).toHaveText('2');
+  await page.screenshot({ path: testInfo.outputPath('expanded-search.png'), fullPage: true, animations: 'disabled' });
+
+  await next.click();
+  await expect(astarExpanded).toHaveText('3');
+  await expect(bfsExpanded).toHaveText('3');
+  await showBoth.press('Enter');
+
+  await expect(expandAstar).toHaveAttribute('aria-expanded', 'false');
+  await expect(expandAstar).toBeFocused();
+  await expect(bfsExpanded).toBeVisible();
+  await expect(bfsPicker).toHaveValue('0');
+  await expect(bfs.getByLabel('Tree zoom')).toHaveText('125%');
+  await expect(bfs.getByRole('img', { name: /^BFS position #0\b/ })).toBeVisible();
+  await expect(astar.getByRole('combobox', { name: 'Inspect a position' })).toHaveValue('13');
+  await expect.poll(async () => (await astar.boundingBox())?.width ?? 0).toBeCloseTo(pairedWidth, 0);
+  await expect(page.getByText('Search paused', { exact: true })).toBeVisible();
+});
+
 test('keeps a manually panned tree steady during playback and marks omitted parents', async ({ page }) => {
   await openSite(page);
   await page.getByLabel('Puzzle library').selectOption('expert-03');
@@ -315,6 +368,15 @@ test.describe('touch and reduced motion', () => {
     await expect(astarTree).toBeHidden();
     await expect(bfsTree.getByRole('combobox', { name: 'Inspect a position' })).toHaveValue('1');
     await expect(page.getByTestId('bfs-expanded')).toHaveText('2');
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390);
+
+    await page.getByRole('button', { name: 'Breadth-first search Expand', exact: true }).tap();
+    await expect(page.getByRole('button', { name: 'Breadth-first search Show both algorithms', exact: true })).toBeVisible();
+    const lanePicker = page.getByRole('group', { name: 'Visible search' });
+    await lanePicker.getByRole('button', { name: 'A*', exact: true }).tap();
+    await page.getByRole('button', { name: 'A* search Show both algorithms', exact: true }).tap();
+    await expect(lanePicker.getByRole('button', { name: 'A*', exact: true })).toHaveAttribute('aria-pressed', 'true');
+    await expect(astarTree).toBeVisible();
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390);
 
     await page.getByRole('button', { name: 'Back to puzzle' }).tap();

@@ -27,13 +27,16 @@ type SearchProps = {
   onReplay(moves: Move[], algorithm: SearchAlgorithm): void;
 };
 
-function Lane({ algorithm, frame, onReplay, replayEnabled, visibleOnPhone, view }: {
+function Lane({ algorithm, frame, onReplay, replayEnabled, visibleOnPhone, view, expanded, hidden, onToggle }: {
   algorithm: SearchAlgorithm;
   frame: Frame;
   onReplay(moves: Move[], algorithm: SearchAlgorithm): void;
   replayEnabled: boolean;
   visibleOnPhone: boolean;
   view: ComparisonView;
+  expanded: boolean;
+  hidden: boolean;
+  onToggle(): void;
 }) {
   const { name, short, rule } = algorithms[algorithm];
   const { moves } = frame;
@@ -45,10 +48,20 @@ function Lane({ algorithm, frame, onReplay, replayEnabled, visibleOnPhone, view 
   ];
 
   return (
-    <article className={`panel search-lane${visibleOnPhone ? ' search-lane--mobile-active' : ''}`} id={`search-lane-${algorithm}`} aria-label={name}>
+    <article className={`panel search-lane${visibleOnPhone ? ' search-lane--mobile-active' : ''}${expanded ? ' search-lane--expanded' : ''}`}
+      id={`search-lane-${algorithm}`} aria-label={name} hidden={hidden}>
       <div className="search-lane-head">
         <div>
-          <h2 className="panel-title">{name}</h2>
+          <h2 className="panel-title">
+            <button type="button" className="search-lane-title" onClick={onToggle}
+              aria-expanded={expanded} aria-controls={`search-lane-${algorithm}`}>
+              {name}
+              <span className="search-lane-action">
+                <Icon name={expanded ? 'collapse' : 'expand'} size={14} />
+                {expanded ? 'Show both algorithms' : 'Expand'}
+              </span>
+            </button>
+          </h2>
           <p className="panel-copy">{rule}</p>
         </div>
         <span className={`search-lane-state search-lane-state--${frame.status}`} data-testid={`${algorithm}-status`}>{statuses[frame.status]}</span>
@@ -106,6 +119,7 @@ function Results({ bfs, astar }: FramePair) {
 
 export function Search({ solver, onBack, onReplay }: SearchProps) {
   const [visibleOnPhone, setVisibleOnPhone] = useState<SearchAlgorithm>('bfs');
+  const [expandedLane, setExpandedLane] = useState<SearchAlgorithm | null>(null);
   const [view, setView] = useState<ComparisonView>('boards');
   const { searchState, frames, status } = solver;
   const paused = searchState === 'paused';
@@ -113,6 +127,7 @@ export function Search({ solver, onBack, onReplay }: SearchProps) {
   const finishing = searchState === 'finishing';
   const active = paused || playing || finishing || searchState === 'starting';
   const replayEnabled = status === 'ready' && (paused || searchState === 'complete');
+  const visibleLane = expandedLane ?? visibleOnPhone;
   const summary = searchState === 'complete' ? 'Comparison complete'
     : finishing ? 'Finding both results…'
       : playing ? 'Playing search steps'
@@ -168,12 +183,22 @@ export function Search({ solver, onBack, onReplay }: SearchProps) {
       {frames && <>
         <div className="search-lane-picker" role="group" aria-label="Visible search">
           {(['bfs', 'astar'] as const).map((algorithm) => <button className="button button--secondary" key={algorithm}
-            type="button" aria-pressed={visibleOnPhone === algorithm} aria-controls={`search-lane-${algorithm}`}
-            onClick={() => setVisibleOnPhone(algorithm)}>{algorithms[algorithm].short}</button>)}
+            type="button" aria-pressed={visibleLane === algorithm} aria-controls={`search-lane-${algorithm}`}
+            onClick={() => {
+              setVisibleOnPhone(algorithm);
+              if (expandedLane) setExpandedLane(algorithm);
+            }}>{algorithms[algorithm].short}</button>)}
         </div>
-        <div className="search-lanes">
-          <Lane algorithm="bfs" frame={frames.bfs} onReplay={onReplay} replayEnabled={replayEnabled} visibleOnPhone={visibleOnPhone === 'bfs'} view={view} />
-          <Lane algorithm="astar" frame={frames.astar} onReplay={onReplay} replayEnabled={replayEnabled} visibleOnPhone={visibleOnPhone === 'astar'} view={view} />
+        <div className={`search-lanes${expandedLane ? ' search-lanes--expanded' : ''}`}>
+          {(['bfs', 'astar'] as const).map((algorithm) => (
+            <Lane key={algorithm} algorithm={algorithm} frame={frames[algorithm]} onReplay={onReplay}
+              replayEnabled={replayEnabled} visibleOnPhone={visibleLane === algorithm} view={view}
+              expanded={expandedLane === algorithm} hidden={expandedLane !== null && expandedLane !== algorithm}
+              onToggle={() => {
+                setVisibleOnPhone(algorithm);
+                setExpandedLane((previous) => previous === algorithm ? null : algorithm);
+              }} />
+          ))}
         </div>
         {searchState === 'complete' && <Results {...frames} />}
         <details className="search-guide">

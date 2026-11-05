@@ -9,6 +9,8 @@ const artwork: Record<string, ReactNode> = {
   undo: <><path d="m9 6-5 5 5 5" /><path d="M4 11h10a5 5 0 0 1 5 5v2" /></>,
   edit: <><path d="M12 20H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h8" /><path d="m10 14 1-4 7-7 3 3-7 7Z" /></>,
   compare: <><path d="M4 19h16M7 15v-4m5 4V5m5 10V8" /><circle cx="7" cy="9" r="1" /><circle cx="12" cy="3" r="1" /><circle cx="17" cy="6" r="1" /></>,
+  expand: <path d="M9 4H4v5m11-5h5v5m0 6v5h-5m-6 0H4v-5" />,
+  collapse: <path d="M4 9h5V4m6 0v5h5m0 6h-5v5m-6 0v-5H4" />,
   shuffle: <><path d="M4 7h2c4 0 6 10 10 10h4m-4-4 4 4-4 4M4 17h2c1.5 0 2.8-1.4 4-3.3M14 8c.6-.7 1.3-1 2-1h4m-4-4 4 4-4 4" /></>,
   arrow: <path d="M4 12h15m-6-6 6 6-6 6" />,
   back: <path d="M20 12H5m6 6-6-6 6-6" />,

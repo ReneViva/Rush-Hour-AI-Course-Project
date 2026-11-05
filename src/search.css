@@ -98,6 +98,8 @@
   align-items: stretch;
 }
 
+.search-lanes--expanded { grid-template-columns: minmax(0, 1fr); }
+
 .search-lane-picker { display: none; }
 
 .search-lane {
@@ -106,6 +108,8 @@
   min-width: 0;
   padding: clamp(0.95rem, 2.8vw, 1.6rem);
 }
+
+.search-lane[hidden] { display: none; }
 
 .search-lane-head {
   display: flex;
@@ -120,6 +124,37 @@
   text-wrap: balance;
   margin: 0 0 0.3rem;
 }
+
+.search-lane-title {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.55rem;
+  min-block-size: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: start;
+}
+
+.search-lane-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0.26rem 0.42rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--accent);
+  font-size: 0.73rem;
+  letter-spacing: normal;
+  white-space: nowrap;
+}
+
+.search-lane-title:hover .search-lane-action,
+.search-lane-title[aria-expanded='true'] .search-lane-action { background: var(--accent-tint); }
 
 .search-lane-head p {
   margin: 0;
@@ -157,6 +192,9 @@
   width: min(100%, 24rem);
   align-self: center;
 }
+
+.search-lane--expanded .search-board-wrap { width: min(100%, 32rem); }
+.search-lane--expanded .search-tree .search-tree-viewport { block-size: clamp(22rem, 56dvh, 36rem); }
 
 .search-tree { display: grid; gap: 0.65rem; min-inline-size: 0; }
 .search-tree-overview { min-block-size: 3.75rem; }
@@ -352,6 +390,7 @@
   .replay-layout { grid-template-columns: minmax(0, 1fr); }
 
   .search-lane-head { min-height: 0; }
+  .search-lane-title { min-block-size: 44px; }
 
   .search-lane-picker {
     display: grid;
