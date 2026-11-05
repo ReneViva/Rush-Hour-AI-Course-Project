@@ -1,0 +1,6 @@
+Rush Hour Lab bundles the unmodified Pyodide 314.0.7 core runtime.
+Pyodide source: https://github.com/pyodide/pyodide/tree/314.0.7
+Pyodide license: Pyodide-LICENSE.txt (MPL 2.0)
+CPython source: https://github.com/python/cpython/tree/v3.14.2
+CPython license: CPython-LICENSE.txt
+Additional bundled notices: licenses/

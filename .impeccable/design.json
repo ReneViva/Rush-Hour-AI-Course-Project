@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05T19:20:12.626Z",
+  "title": "Design System: Rush Hour Lab",
+  "extensions": {
+    "colorMeta": {
+      "forest": {
+        "role": "primary",
+        "displayName": "Forest green",
+        "canonical": "#244c39",
+        "tonalRamp": [
+          "oklch(15% 0.056 161.4)",
+          "oklch(26% 0.056 161.4)",
+          "oklch(38% 0.056 161.4)",
+          "oklch(49% 0.056 161.4)",
+          "oklch(61% 0.056 161.4)",
+          "oklch(72% 0.056 161.4)",
+          "oklch(84% 0.056 161.4)",
+          "oklch(95% 0.056 161.4)"
+        ]
+      },
+      "forest-hover": {
+        "role": "primary",
+        "displayName": "Deep forest",
+        "canonical": "#173c2a",
+        "tonalRamp": [
+          "oklch(15% 0.054 160.0)",
+          "oklch(26% 0.054 160.0)",
+          "oklch(38% 0.054 160.0)",
+          "oklch(49% 0.054 160.0)",
+          "oklch(61% 0.054 160.0)",
+          "oklch(72% 0.054 160.0)",
+          "oklch(84% 0.054 160.0)",
+          "oklch(95% 0.054 160.0)"
+        ]
+      },
+      "sage-tint": {
+        "role": "secondary",
+        "displayName": "Pale sage",
+        "canonical": "#e2eadc",
+        "tonalRamp": [
+          "oklch(15% 0.021 131.5)",
+          "oklch(26% 0.021 131.5)",
+          "oklch(38% 0.021 131.5)",
+          "oklch(49% 0.021 131.5)",
+          "oklch(61% 0.021 131.5)",
+          "oklch(72% 0.021 131.5)",
+          "oklch(84% 0.021 131.5)",
+          "oklch(95% 0.021 131.5)"
+        ]
+      },
+      "target-red": {
+        "role": "tertiary",
+        "displayName": "Signal red",
+        "canonical": "#b8312a",
+        "tonalRamp": [
+          "oklch(15% 0.173 27.8)",
+          "oklch(26% 0.173 27.8)",
+          "oklch(38% 0.173 27.8)",
+          "oklch(49% 0.173 27.8)",
+          "oklch(61% 0.173 27.8)",
+          "oklch(72% 0.173 27.8)",
+          "oklch(84% 0.173 27.8)",
+          "oklch(95% 0.173 27.8)"
+        ]
+      },
+      "warm-paper": {
+        "role": "neutral",
+        "displayName": "Warm paper",
+        "canonical": "#f2efe6",
+        "tonalRamp": [
+          "oklch(15% 0.012 91.5)",
+          "oklch(26% 0.012 91.5)",
+          "oklch(38% 0.012 91.5)",
+          "oklch(49% 0.012 91.5)",
+          "oklch(61% 0.012 91.5)",
+          "oklch(72% 0.012 91.5)",
+          "oklch(84% 0.012 91.5)",
+          "oklch(95% 0.012 91.5)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Ivory panel",
+        "canonical": "#faf8f0",
+        "tonalRamp": [
+          "oklch(15% 0.011 95.2)",
+          "oklch(26% 0.011 95.2)",
+          "oklch(38% 0.011 95.2)",
+          "oklch(49% 0.011 95.2)",
+          "oklch(61% 0.011 95.2)",
+          "oklch(72% 0.011 95.2)",
+          "oklch(84% 0.011 95.2)",
+          "oklch(95% 0.011 95.2)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Forest ink",
+        "canonical": "#20352c",
+        "tonalRamp": [
+          "oklch(15% 0.032 165.7)",
+          "oklch(26% 0.032 165.7)",
+          "oklch(38% 0.032 165.7)",
+          "oklch(49% 0.032 165.7)",
+          "oklch(61% 0.032 165.7)",
+          "oklch(72% 0.032 165.7)",
+          "oklch(84% 0.032 165.7)",
+          "oklch(95% 0.032 165.7)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted forest",
+        "canonical": "#586459",
+        "tonalRamp": [
+          "oklch(15% 0.023 147.6)",
+          "oklch(26% 0.023 147.6)",
+          "oklch(38% 0.023 147.6)",
+          "oklch(49% 0.023 147.6)",
+          "oklch(61% 0.023 147.6)",
+          "oklch(72% 0.023 147.6)",
+          "oklch(84% 0.023 147.6)",
+          "oklch(95% 0.023 147.6)"
+        ]
+      },
+      "divider": {
+        "role": "neutral",
+        "displayName": "Paper divider",
+        "canonical": "#d7d5c7",
+        "tonalRamp": [
+          "oklch(15% 0.019 100.2)",
+          "oklch(26% 0.019 100.2)",
+          "oklch(38% 0.019 100.2)",
+          "oklch(49% 0.019 100.2)",
+          "oklch(61% 0.019 100.2)",
+          "oklch(72% 0.019 100.2)",
+          "oklch(84% 0.019 100.2)",
+          "oklch(95% 0.019 100.2)"
+        ]
+      },
+      "action-text": {
+        "role": "neutral",
+        "displayName": "Ivory action text",
+        "canonical": "#fffdf5",
+        "tonalRamp": [
+          "oklch(15% 0.011 95.2)",
+          "oklch(26% 0.011 95.2)",
+          "oklch(38% 0.011 95.2)",
+          "oklch(49% 0.011 95.2)",
+          "oklch(61% 0.011 95.2)",
+          "oklch(72% 0.011 95.2)",
+          "oklch(84% 0.011 95.2)",
+          "oklch(95% 0.011 95.2)"
+        ]
+      },
+      "blocker": {
+        "role": "tertiary",
+        "displayName": "Dark blocker outline",
+        "canonical": "#233628",
+        "tonalRamp": [
+          "oklch(15% 0.035 152.2)",
+          "oklch(26% 0.035 152.2)",
+          "oklch(38% 0.035 152.2)",
+          "oklch(49% 0.035 152.2)",
+          "oklch(61% 0.035 152.2)",
+          "oklch(72% 0.035 152.2)",
+          "oklch(84% 0.035 152.2)",
+          "oklch(95% 0.035 152.2)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Screen title."
+      },
+      "body": {
+        "displayName": "Interface text",
+        "purpose": "Instructions and descriptions."
+      },
+      "notation": {
+        "displayName": "Board notation",
+        "purpose": "Grid coordinates, vehicle IDs, and counters."
+      }
+    },
+    "shadows": [
+      {
+        "name": "tray",
+        "value": "0 5px 1px #192a20, 0 12px 22px #25312523",
+        "purpose": "Visible molded edge below the tray."
+      },
+      {
+        "name": "vehicle",
+        "value": "inset 0 1px 0 var(--car-shine), inset 0 -3px 0 var(--car-dark), 0 2px 2px #17231c9e",
+        "purpose": "Raised vehicle body."
+      }
+    ],
+    "motion": [
+      {
+        "name": "slide",
+        "value": ".24s cubic-bezier(.2, .75, .27, 1)",
+        "purpose": "Vehicle translation along its lane."
+      },
+      {
+        "name": "controls",
+        "value": ".14s ease",
+        "purpose": "Control color and border changes."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "workbench-stack",
+        "value": "760px"
+      },
+      {
+        "name": "single-search-lane",
+        "value": "740px"
+      },
+      {
+        "name": "tight-search-heading",
+        "value": "480px"
+      },
+      {
+        "name": "tight-controls",
+        "value": "350px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Advance to the main action.",
+      "html": "<button class=\"ds-btn ds-primary\">Compare BFS &amp; A*</button>",
+      "css": ".ds-btn{min-height:42px;padding:7px 13px;border:1px solid transparent;border-radius:8px;font:780 .86rem/1.24 'Manrope Variable',system-ui,sans-serif;cursor:pointer;transition:background-color .14s ease,border-color .14s ease,color .14s ease}.ds-btn:focus-visible,.ds-field:focus-visible,.ds-brand:focus-visible { outline:2px solid var(--accent,#244c39);outline-offset:3px }.ds-primary{background:var(--accent,#244c39);color:#fffdf5}.ds-primary:hover{background:var(--accent-hover,#173c2a)}"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Offer a related action.",
+      "html": "<button class=\"ds-btn ds-secondary\">Edit board</button>",
+      "css": ".ds-btn{min-height:42px;padding:7px 13px;border:1px solid transparent;border-radius:8px;font:780 .86rem/1.24 'Manrope Variable',system-ui,sans-serif;cursor:pointer;transition:background-color .14s ease,border-color .14s ease,color .14s ease}.ds-btn:focus-visible,.ds-field:focus-visible,.ds-brand:focus-visible { outline:2px solid var(--accent,#244c39);outline-offset:3px }.ds-secondary{background:var(--accent-tint,#e2eadc);border-color:#b5c3b6;color:var(--accent,#244c39)}.ds-secondary:hover{background:#d5e1d1;border-color:#99b09e}"
+    },
+    {
+      "name": "Quiet button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Undo or return without changing the current task.",
+      "html": "<button class=\"ds-btn ds-quiet\">Undo</button>",
+      "css": ".ds-btn{min-height:42px;padding:7px 13px;border:1px solid transparent;border-radius:8px;font:780 .86rem/1.24 'Manrope Variable',system-ui,sans-serif;cursor:pointer;transition:background-color .14s ease,border-color .14s ease,color .14s ease}.ds-btn:focus-visible,.ds-field:focus-visible,.ds-brand:focus-visible { outline:2px solid var(--accent,#244c39);outline-offset:3px }.ds-quiet{background:var(--surface,#faf8f0);border-color:var(--line,#d7d5c7);color:var(--ink,#20352c)}.ds-quiet:hover{background:#ecebde;border-color:#b8c1b4}"
+    },
+    {
+      "name": "Number field",
+      "kind": "input",
+      "description": "Enter a seed or choose a board dimension.",
+      "html": "<label class=\"ds-label\">Seed <input class=\"ds-field\" type=\"number\" placeholder=\"Any\"></label>",
+      "css": ".ds-btn:focus-visible,.ds-field:focus-visible,.ds-brand:focus-visible { outline:2px solid var(--accent,#244c39);outline-offset:3px }.ds-label{display:grid;gap:6px;color:var(--ink,#20352c);font:700 .8rem 'Manrope Variable',system-ui,sans-serif}.ds-field{background:#fffdf5;border:1px solid #c4c7b7;border-radius:8px;padding:8px 10px;font:inherit}"
+    },
+    {
+      "name": "Home control",
+      "kind": "nav",
+      "description": "Return to the playable puzzle.",
+      "html": "<button class=\"ds-brand\"><span class=\"ds-mark\"><svg width=\"21\" height=\"21\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" aria-hidden=\"true\"><path d=\"m5 11 2-5h10l2 5M5 11h14l2 3v4H3v-4Zm1 7v2m12-2v2M7 14h2m6 0h2\"/></svg></span><span>Rush Hour Lab</span></button>",
+      "css": ".ds-btn:focus-visible,.ds-field:focus-visible,.ds-brand:focus-visible { outline:2px solid var(--accent,#244c39);outline-offset:3px }.ds-brand{display:inline-flex;align-items:center;gap:11px;border:0;background:none;color:var(--ink,#20352c);font:800 .98rem 'Manrope Variable',system-ui,sans-serif}.ds-mark{display:grid;place-items:center;width:37px;height:37px;border-radius:9px;background:var(--accent,#244c39);color:var(--surface,#faf8f0)}"
+    },
+    {
+      "name": "Board chip",
+      "kind": "chip",
+      "description": "Display a dimension or difficulty.",
+      "html": "<span class=\"ds-chip\">6 × 6</span>",
+      "css": ".ds-chip{display:inline-flex;padding:4px 8px;border:1px solid #ccd4c5;border-radius:6px;background:#e8eddf;color:#385542;font:600 .74rem/1.25 Consolas,monospace}"
+    },
+    {
+      "name": "Controls panel",
+      "kind": "card",
+      "refersTo": "controls-panel",
+      "description": "Group controls beside the board.",
+      "html": "<section class=\"ds-panel\"><strong>Your puzzle</strong><p>Pick a board or build one of your own.</p></section>",
+      "css": ".ds-panel{padding:clamp(15px,2.3vw,24px);border:1px solid var(--line,#d7d5c7);border-radius:var(--radius,14px);background:var(--surface,#faf8f0);color:var(--ink,#20352c);font-family:'Manrope Variable',system-ui,sans-serif}.ds-panel p{margin:.35rem 0 0;color:var(--muted,#586459);font-size:.89rem}"
+    },
+    {
+      "name": "Target vehicle",
+      "kind": "custom",
+      "description": "Keep the target distinct with a red body and X badge.",
+      "html": "<div class=\"ds-vehicle\"><span class=\"ds-id\">X</span><span class=\"ds-window\" aria-hidden=\"true\"></span></div>",
+      "css": ".ds-vehicle{position:relative;display:grid;place-items:center;width:96px;height:46px;border-radius:8px;background:#b8312a;color:#fff8ee;box-shadow:inset 0 1px 0 #f4a082,inset 0 -3px 0 #78271f,0 2px 2px #17231c9e}.ds-id{font:800 14px Consolas,monospace}.ds-window{position:absolute;right:13%;inset-block:19% 24%;width:24%;border:1px solid #8c3928;border-radius:4px;background:#edaa8c}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Tactile tabletop",
+    "overview": "The interface takes its cues from a tabletop sliding puzzle. Warm paper surrounds a forest green tray, with bright vehicle bodies and a red target. The controls sit quietly beside the board so the grid, the exit, and each slide carry the experience.",
+    "keyCharacteristics": [
+      "Board-first layouts at desktop and phone widths.",
+      "Legible piece IDs and status markers that work without color.",
+      "Reserved motion for legal slides and short control transitions."
+    ],
+    "rules": [],
+    "dos": [
+      "Do use short action labels and show the board state they affect.",
+      "Do pair the target color and the blocker outline with visible IDs.",
+      "Do show validation close to the affected control or board."
+    ],
+    "donts": [
+      "Don't animate jumps between unrelated search states.",
+      "Don't rely on color alone to identify a piece or communicate its state."
+    ]
+  }
+}

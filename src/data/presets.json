@@ -1,0 +1,2794 @@
+[
+  {
+    "id": "beginner-01",
+    "name": "First Escape",
+    "difficulty": "Beginner",
+    "optimalMoves": 4,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 0,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 1,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "D",
+          "row": 0,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 4,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 1,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 2,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "H",
+          "row": 2,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "beginner-02",
+    "name": "Beginner 02",
+    "difficulty": "Beginner",
+    "optimalMoves": 1,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 1,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "B",
+          "row": 3,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 3,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 4,
+          "col": 0,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "E",
+          "row": 4,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "F",
+          "row": 5,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "G",
+          "row": 0,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "beginner-03",
+    "name": "Beginner 03",
+    "difficulty": "Beginner",
+    "optimalMoves": 1,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 0,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "B",
+          "row": 1,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 4,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 5,
+          "col": 1,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "E",
+          "row": 5,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 2,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 4,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 2,
+          "col": 1,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "I",
+          "row": 1,
+          "col": 2,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "J",
+          "row": 3,
+          "col": 3,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "K",
+          "row": 0,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "beginner-04",
+    "name": "Beginner 04",
+    "difficulty": "Beginner",
+    "optimalMoves": 1,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 2,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "B",
+          "row": 5,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 0,
+          "col": 1,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 2,
+          "col": 1,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "E",
+          "row": 1,
+          "col": 2,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "F",
+          "row": 4,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 3,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "H",
+          "row": 3,
+          "col": 4,
+          "axis": "V",
+          "length": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "beginner-05",
+    "name": "Beginner 05",
+    "difficulty": "Beginner",
+    "optimalMoves": 3,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 3,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 5,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 0,
+          "col": 1,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 2,
+          "col": 1,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "E",
+          "row": 3,
+          "col": 2,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "F",
+          "row": 4,
+          "col": 3,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 1,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 4,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "I",
+          "row": 2,
+          "col": 5,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "beginner-06",
+    "name": "Beginner 06",
+    "difficulty": "Beginner",
+    "optimalMoves": 3,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 5,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 2,
+          "col": 1,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "C",
+          "row": 4,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 3,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "E",
+          "row": 1,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 0,
+          "col": 5,
+          "axis": "V",
+          "length": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "beginner-07",
+    "name": "Beginner 07",
+    "difficulty": "Beginner",
+    "optimalMoves": 3,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 0,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "B",
+          "row": 0,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 1,
+          "col": 0,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "D",
+          "row": 1,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 3,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 4,
+          "col": 2,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "G",
+          "row": 5,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 2,
+          "col": 0,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "I",
+          "row": 2,
+          "col": 1,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "J",
+          "row": 2,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "K",
+          "row": 0,
+          "col": 3,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "L",
+          "row": 2,
+          "col": 5,
+          "axis": "V",
+          "length": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "beginner-08",
+    "name": "Beginner 08",
+    "difficulty": "Beginner",
+    "optimalMoves": 3,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 1,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 3,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 4,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 5,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 5,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 0,
+          "col": 0,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "H",
+          "row": 3,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "I",
+          "row": 0,
+          "col": 1,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "J",
+          "row": 0,
+          "col": 2,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "K",
+          "row": 3,
+          "col": 2,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "L",
+          "row": 2,
+          "col": 5,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "intermediate-01",
+    "name": "Intermediate 01",
+    "difficulty": "Intermediate",
+    "optimalMoves": 5,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "B",
+          "row": 1,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 4,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 4,
+          "col": 1,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 2,
+          "col": 3,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 1,
+          "col": 5,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "intermediate-02",
+    "name": "Intermediate 02",
+    "difficulty": "Intermediate",
+    "optimalMoves": 5,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 0,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "B",
+          "row": 1,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "C",
+          "row": 5,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 5,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 1,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 2,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "G",
+          "row": 4,
+          "col": 5,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "intermediate-03",
+    "name": "Intermediate 03",
+    "difficulty": "Intermediate",
+    "optimalMoves": 5,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 0,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 1,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 3,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 5,
+          "col": 0,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "F",
+          "row": 5,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 1,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 3,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "I",
+          "row": 2,
+          "col": 5,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "J",
+          "row": 4,
+          "col": 5,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "intermediate-04",
+    "name": "Intermediate 04",
+    "difficulty": "Intermediate",
+    "optimalMoves": 6,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 0,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 1,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "D",
+          "row": 3,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 5,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "F",
+          "row": 4,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 0,
+          "col": 1,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 2,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "I",
+          "row": 2,
+          "col": 5,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "intermediate-05",
+    "name": "Intermediate 05",
+    "difficulty": "Intermediate",
+    "optimalMoves": 8,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 1,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 3,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 5,
+          "col": 1,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "E",
+          "row": 5,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 2,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 4,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 0,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "I",
+          "row": 1,
+          "col": 5,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "intermediate-06",
+    "name": "Intermediate 06",
+    "difficulty": "Intermediate",
+    "optimalMoves": 8,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 3,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 3,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 4,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 4,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 5,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "G",
+          "row": 1,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 4,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "I",
+          "row": 0,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "J",
+          "row": 0,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "K",
+          "row": 2,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "intermediate-07",
+    "name": "Intermediate 07",
+    "difficulty": "Intermediate",
+    "optimalMoves": 8,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 0,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 0,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 1,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 1,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 5,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 5,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 3,
+          "col": 1,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "I",
+          "row": 2,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "J",
+          "row": 2,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "K",
+          "row": 2,
+          "col": 5,
+          "axis": "V",
+          "length": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "intermediate-08",
+    "name": "Intermediate 08",
+    "difficulty": "Intermediate",
+    "optimalMoves": 8,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 0,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 1,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "D",
+          "row": 3,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 5,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "F",
+          "row": 1,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 3,
+          "col": 0,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "H",
+          "row": 2,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "I",
+          "row": 2,
+          "col": 5,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "advanced-01",
+    "name": "Advanced 01",
+    "difficulty": "Advanced",
+    "optimalMoves": 10,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 0,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 1,
+          "col": 0,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "D",
+          "row": 3,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 5,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "F",
+          "row": 2,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 4,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 1,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "I",
+          "row": 1,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "advanced-02",
+    "name": "Advanced 02",
+    "difficulty": "Advanced",
+    "optimalMoves": 10,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 0,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 1,
+          "col": 0,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "D",
+          "row": 3,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 5,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "F",
+          "row": 2,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 4,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 1,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "I",
+          "row": 1,
+          "col": 5,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "advanced-03",
+    "name": "Advanced 03",
+    "difficulty": "Advanced",
+    "optimalMoves": 10,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 1,
+          "col": 2,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "C",
+          "row": 3,
+          "col": 1,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "D",
+          "row": 4,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 5,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 5,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 1,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 3,
+          "col": 0,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "I",
+          "row": 4,
+          "col": 1,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "J",
+          "row": 3,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "K",
+          "row": 0,
+          "col": 5,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "L",
+          "row": 2,
+          "col": 5,
+          "axis": "V",
+          "length": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "advanced-04",
+    "name": "Advanced 04",
+    "difficulty": "Advanced",
+    "optimalMoves": 11,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 0,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 1,
+          "col": 1,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "D",
+          "row": 5,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 5,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 0,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 3,
+          "col": 1,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "H",
+          "row": 2,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "I",
+          "row": 1,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "J",
+          "row": 3,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "K",
+          "row": 1,
+          "col": 5,
+          "axis": "V",
+          "length": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "advanced-05",
+    "name": "Advanced 05",
+    "difficulty": "Advanced",
+    "optimalMoves": 11,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 3,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 3,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 5,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "E",
+          "row": 1,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 3,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 0,
+          "col": 1,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 4,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "I",
+          "row": 0,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "advanced-06",
+    "name": "Advanced 06",
+    "difficulty": "Advanced",
+    "optimalMoves": 13,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "B",
+          "row": 1,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 4,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 5,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 5,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 0,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 4,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 0,
+          "col": 1,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "I",
+          "row": 0,
+          "col": 2,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "J",
+          "row": 3,
+          "col": 3,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "K",
+          "row": 3,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "advanced-07",
+    "name": "Advanced 07",
+    "difficulty": "Advanced",
+    "optimalMoves": 17,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 0,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 1,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 5,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 5,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 2,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 2,
+          "col": 1,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "H",
+          "row": 0,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "I",
+          "row": 2,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "J",
+          "row": 4,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "K",
+          "row": 3,
+          "col": 5,
+          "axis": "V",
+          "length": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "advanced-08",
+    "name": "Advanced 08",
+    "difficulty": "Advanced",
+    "optimalMoves": 18,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 3,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 3,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 4,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 5,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "F",
+          "row": 1,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 3,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 4,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "I",
+          "row": 2,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "J",
+          "row": 0,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "expert-01",
+    "name": "Expert 01",
+    "difficulty": "Expert",
+    "optimalMoves": 20,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 0,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "B",
+          "row": 1,
+          "col": 0,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 4,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 5,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 2,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 4,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 4,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 0,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "I",
+          "row": 0,
+          "col": 4,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "J",
+          "row": 0,
+          "col": 5,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "K",
+          "row": 2,
+          "col": 5,
+          "axis": "V",
+          "length": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "expert-02",
+    "name": "Expert 02",
+    "difficulty": "Expert",
+    "optimalMoves": 21,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 3,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 1,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "B",
+          "row": 5,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 0,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 2,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 0,
+          "col": 1,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 2,
+          "col": 1,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 2,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 4,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "I",
+          "row": 3,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "J",
+          "row": 0,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "K",
+          "row": 0,
+          "col": 5,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "L",
+          "row": 2,
+          "col": 5,
+          "axis": "V",
+          "length": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "expert-03",
+    "name": "Expert 03",
+    "difficulty": "Expert",
+    "optimalMoves": 23,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "B",
+          "row": 1,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "C",
+          "row": 3,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 5,
+          "col": 2,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "E",
+          "row": 1,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 3,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 4,
+          "col": 1,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 0,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "I",
+          "row": 2,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "J",
+          "row": 3,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "expert-04",
+    "name": "Expert 04",
+    "difficulty": "Expert",
+    "optimalMoves": 23,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 1,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "B",
+          "row": 3,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 4,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 5,
+          "col": 0,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "E",
+          "row": 0,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 2,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 0,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 3,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "I",
+          "row": 2,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "J",
+          "row": 2,
+          "col": 5,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "expert-05",
+    "name": "Expert 05",
+    "difficulty": "Expert",
+    "optimalMoves": 23,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 2,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "B",
+          "row": 1,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "C",
+          "row": 3,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 4,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 5,
+          "col": 0,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "F",
+          "row": 0,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 2,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 0,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "I",
+          "row": 3,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "J",
+          "row": 2,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "expert-06",
+    "name": "Expert 06",
+    "difficulty": "Expert",
+    "optimalMoves": 23,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "B",
+          "row": 1,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "C",
+          "row": 3,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 4,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 5,
+          "col": 2,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "F",
+          "row": 1,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 3,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 4,
+          "col": 1,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "I",
+          "row": 0,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "J",
+          "row": 2,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "K",
+          "row": 2,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "expert-07",
+    "name": "Expert 07",
+    "difficulty": "Expert",
+    "optimalMoves": 23,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 0,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "B",
+          "row": 1,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "C",
+          "row": 3,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "D",
+          "row": 4,
+          "col": 4,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 5,
+          "col": 2,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "F",
+          "row": 1,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 3,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 4,
+          "col": 1,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "I",
+          "row": 0,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "J",
+          "row": 2,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "K",
+          "row": 2,
+          "col": 5,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "expert-08",
+    "name": "Expert 08",
+    "difficulty": "Expert",
+    "optimalMoves": 24,
+    "board": {
+      "rows": 6,
+      "cols": 6,
+      "vehicles": [
+        {
+          "id": "X",
+          "row": 2,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "A",
+          "row": 1,
+          "col": 3,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "B",
+          "row": 3,
+          "col": 1,
+          "axis": "H",
+          "length": 2
+        },
+        {
+          "id": "C",
+          "row": 5,
+          "col": 2,
+          "axis": "H",
+          "length": 3
+        },
+        {
+          "id": "D",
+          "row": 1,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "E",
+          "row": 3,
+          "col": 0,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "F",
+          "row": 4,
+          "col": 1,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "G",
+          "row": 0,
+          "col": 2,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "H",
+          "row": 2,
+          "col": 3,
+          "axis": "V",
+          "length": 3
+        },
+        {
+          "id": "I",
+          "row": 3,
+          "col": 4,
+          "axis": "V",
+          "length": 2
+        },
+        {
+          "id": "J",
+          "row": 4,
+          "col": 5,
+          "axis": "V",
+          "length": 2
+        }
+      ]
+    }
+  }
+]

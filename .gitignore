@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.cache/
+public/pyodide/
+public/python/
+__pycache__/
+*.py[cod]
+.playwright/
+reports/
+*.zip
+public/licenses/
+.impeccable/review/

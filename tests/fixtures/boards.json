@@ -1,0 +1,459 @@
+{
+  "boards": [
+    {
+      "name": "classic",
+      "board": {
+        "rows": 6,
+        "cols": 6,
+        "vehicles": [
+          {
+            "id": "X",
+            "row": 2,
+            "col": 0,
+            "axis": "H",
+            "length": 2
+          },
+          {
+            "id": "A",
+            "row": 1,
+            "col": 3,
+            "axis": "V",
+            "length": 2
+          },
+          {
+            "id": "B",
+            "row": 5,
+            "col": 2,
+            "axis": "H",
+            "length": 3
+          }
+        ]
+      },
+      "valid": true,
+      "solved": false
+    },
+    {
+      "name": "overlap",
+      "board": {
+        "rows": 6,
+        "cols": 6,
+        "vehicles": [
+          {
+            "id": "X",
+            "row": 2,
+            "col": 0,
+            "axis": "H",
+            "length": 2
+          },
+          {
+            "id": "A",
+            "row": 1,
+            "col": 3,
+            "axis": "V",
+            "length": 2
+          },
+          {
+            "id": "B",
+            "row": 5,
+            "col": 2,
+            "axis": "H",
+            "length": 3
+          },
+          {
+            "id": "C",
+            "row": 2,
+            "col": 1,
+            "axis": "H",
+            "length": 2
+          }
+        ]
+      },
+      "valid": false
+    },
+    {
+      "name": "cropped on resize",
+      "board": {
+        "rows": 6,
+        "cols": 4,
+        "vehicles": [
+          {
+            "id": "X",
+            "row": 2,
+            "col": 0,
+            "axis": "H",
+            "length": 2
+          },
+          {
+            "id": "A",
+            "row": 1,
+            "col": 3,
+            "axis": "V",
+            "length": 2
+          },
+          {
+            "id": "B",
+            "row": 5,
+            "col": 2,
+            "axis": "H",
+            "length": 3
+          }
+        ]
+      },
+      "valid": false
+    },
+    {
+      "name": "missing target",
+      "board": {
+        "rows": 6,
+        "cols": 6,
+        "vehicles": [
+          {
+            "id": "A",
+            "row": 1,
+            "col": 3,
+            "axis": "V",
+            "length": 2
+          },
+          {
+            "id": "B",
+            "row": 5,
+            "col": 2,
+            "axis": "H",
+            "length": 3
+          }
+        ]
+      },
+      "valid": false
+    },
+    {
+      "name": "vertical target",
+      "board": {
+        "rows": 6,
+        "cols": 6,
+        "vehicles": [
+          {
+            "id": "X",
+            "row": 2,
+            "col": 0,
+            "axis": "V",
+            "length": 2
+          },
+          {
+            "id": "A",
+            "row": 1,
+            "col": 3,
+            "axis": "V",
+            "length": 2
+          },
+          {
+            "id": "B",
+            "row": 5,
+            "col": 2,
+            "axis": "H",
+            "length": 3
+          }
+        ]
+      },
+      "valid": false
+    },
+    {
+      "name": "custom target at exit",
+      "board": {
+        "rows": 4,
+        "cols": 9,
+        "vehicles": [
+          {
+            "id": "X",
+            "row": 3,
+            "col": 5,
+            "axis": "H",
+            "length": 4
+          }
+        ]
+      },
+      "valid": true,
+      "solved": true
+    },
+    {
+      "name": "duplicate ID",
+      "board": {
+        "rows": 6,
+        "cols": 6,
+        "vehicles": [
+          {
+            "id": "X",
+            "row": 2,
+            "col": 0,
+            "axis": "H",
+            "length": 2
+          },
+          {
+            "id": "A",
+            "row": 1,
+            "col": 3,
+            "axis": "V",
+            "length": 2
+          },
+          {
+            "id": "B",
+            "row": 5,
+            "col": 2,
+            "axis": "H",
+            "length": 3
+          },
+          {
+            "id": "A",
+            "row": 0,
+            "col": 0,
+            "axis": "H",
+            "length": 2
+          }
+        ]
+      },
+      "valid": false
+    },
+    {
+      "name": "bad size",
+      "board": {
+        "rows": 3,
+        "cols": 6,
+        "vehicles": [
+          {
+            "id": "X",
+            "row": 2,
+            "col": 0,
+            "axis": "H",
+            "length": 2
+          },
+          {
+            "id": "A",
+            "row": 1,
+            "col": 3,
+            "axis": "V",
+            "length": 2
+          },
+          {
+            "id": "B",
+            "row": 5,
+            "col": 2,
+            "axis": "H",
+            "length": 3
+          }
+        ]
+      },
+      "valid": false
+    }
+  ],
+  "moves": [
+    {
+      "name": "one cell before blocker",
+      "board": {
+        "rows": 6,
+        "cols": 6,
+        "vehicles": [
+          {
+            "id": "X",
+            "row": 2,
+            "col": 0,
+            "axis": "H",
+            "length": 2
+          },
+          {
+            "id": "A",
+            "row": 1,
+            "col": 3,
+            "axis": "V",
+            "length": 2
+          },
+          {
+            "id": "B",
+            "row": 5,
+            "col": 2,
+            "axis": "H",
+            "length": 3
+          }
+        ]
+      },
+      "move": {
+        "id": "X",
+        "delta": 1
+      },
+      "legal": true
+    },
+    {
+      "name": "cannot leap over blocker",
+      "board": {
+        "rows": 6,
+        "cols": 6,
+        "vehicles": [
+          {
+            "id": "X",
+            "row": 2,
+            "col": 0,
+            "axis": "H",
+            "length": 2
+          },
+          {
+            "id": "A",
+            "row": 1,
+            "col": 3,
+            "axis": "V",
+            "length": 2
+          },
+          {
+            "id": "B",
+            "row": 5,
+            "col": 2,
+            "axis": "H",
+            "length": 3
+          }
+        ]
+      },
+      "move": {
+        "id": "X",
+        "delta": 4
+      },
+      "legal": false
+    },
+    {
+      "name": "cannot cross board edge",
+      "board": {
+        "rows": 6,
+        "cols": 6,
+        "vehicles": [
+          {
+            "id": "X",
+            "row": 2,
+            "col": 0,
+            "axis": "H",
+            "length": 2
+          },
+          {
+            "id": "A",
+            "row": 1,
+            "col": 3,
+            "axis": "V",
+            "length": 2
+          },
+          {
+            "id": "B",
+            "row": 5,
+            "col": 2,
+            "axis": "H",
+            "length": 3
+          }
+        ]
+      },
+      "move": {
+        "id": "X",
+        "delta": -1
+      },
+      "legal": false
+    },
+    {
+      "name": "cannot stay still",
+      "board": {
+        "rows": 6,
+        "cols": 6,
+        "vehicles": [
+          {
+            "id": "X",
+            "row": 2,
+            "col": 0,
+            "axis": "H",
+            "length": 2
+          },
+          {
+            "id": "A",
+            "row": 1,
+            "col": 3,
+            "axis": "V",
+            "length": 2
+          },
+          {
+            "id": "B",
+            "row": 5,
+            "col": 2,
+            "axis": "H",
+            "length": 3
+          }
+        ]
+      },
+      "move": {
+        "id": "X",
+        "delta": 0
+      },
+      "legal": false
+    },
+    {
+      "name": "vertical blocker up",
+      "board": {
+        "rows": 6,
+        "cols": 6,
+        "vehicles": [
+          {
+            "id": "X",
+            "row": 2,
+            "col": 0,
+            "axis": "H",
+            "length": 2
+          },
+          {
+            "id": "A",
+            "row": 1,
+            "col": 3,
+            "axis": "V",
+            "length": 2
+          },
+          {
+            "id": "B",
+            "row": 5,
+            "col": 2,
+            "axis": "H",
+            "length": 3
+          }
+        ]
+      },
+      "move": {
+        "id": "A",
+        "delta": -1
+      },
+      "legal": true
+    },
+    {
+      "name": "vertical truck hits car on its path",
+      "board": {
+        "rows": 6,
+        "cols": 6,
+        "vehicles": [
+          {
+            "id": "X",
+            "row": 2,
+            "col": 0,
+            "axis": "H",
+            "length": 2
+          },
+          {
+            "id": "A",
+            "row": 1,
+            "col": 3,
+            "axis": "V",
+            "length": 2
+          },
+          {
+            "id": "B",
+            "row": 5,
+            "col": 2,
+            "axis": "H",
+            "length": 3
+          }
+        ]
+      },
+      "move": {
+        "id": "A",
+        "delta": 4
+      },
+      "legal": false
+    }
+  ]
+}
