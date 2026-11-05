@@ -1,6 +1,8 @@
-# Rush Hour Lab
+# Rush Hour AI Course Project
 
-Play a Rush Hour board, build your own traffic jam, and compare how breadth-first search (BFS) and A* find the exit. Built for CS246/346 Artificial Intelligence at the American University of Armenia.
+Rush Hour Lab is a browser game and search visualizer built for CS246/346 Artificial Intelligence at the American University of Armenia. Play a preset, build your own traffic jam, and compare how breadth-first search (BFS) and A* find the exit. Expand either algorithm to give its board and search tree more room.
+
+[Play Rush Hour Lab](https://reneviva.github.io/Rush-Hour-AI-Course-Project/)
 
 ## Run locally
 
