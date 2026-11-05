@@ -224,7 +224,8 @@ class SearchEngine:
             status = "expanded"
         return {"id": node.id, "parentId": self.nodes[node.parent].id if node.parent is not None else None,
                 "move": self._move(node) if node.parent is not None else None,
-                "depth": node.cost, "h": node.heuristic, "status": status}
+                "depth": node.cost, "h": node.heuristic, "status": status,
+                "anchors": list(state)}
 
     def _tree(self):
         path = []

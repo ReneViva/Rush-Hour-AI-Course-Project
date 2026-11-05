@@ -171,34 +171,116 @@ test('uses the offline static bundle in a subdirectory and replays the real Pyth
   expect(external).toEqual([]);
 });
 
-test('shows real BFS and A* branches at the same search step', async ({ page }, testInfo) => {
+test('shows and independently inspects real BFS and A* branches at the same search step', async ({ page }, testInfo) => {
   await openSite(page);
   await openSearch(page);
   await page.getByRole('button', { name: 'Search trees' }).click();
   const bfs = page.getByRole('region', { name: 'BFS search tree', exact: true });
   const astar = page.getByRole('region', { name: 'A* search tree', exact: true });
-  await expect(bfs.getByText('1 position discovered.')).toBeVisible();
-  await expect(astar.getByText('1 position discovered.')).toBeVisible();
+  const bfsPicker = bfs.getByRole('combobox', { name: 'Inspect a position' });
+  const astarPicker = astar.getByRole('combobox', { name: 'Inspect a position' });
+  const bfsStart = bfs.getByRole('button', { name: /^#0\b/ });
+  const astarStart = astar.getByRole('button', { name: /^#0\b/ });
+  const next = page.getByRole('button', { name: 'Next step' });
+  await expect(bfsPicker).toHaveValue('0');
+  await expect(astarPicker).toHaveValue('0');
 
-  await page.getByRole('button', { name: 'Next step' }).click();
-  await expect(bfs.getByText('depth 1').first()).toBeVisible();
-  await expect(astar.getByText(/f = 1 \+ \d+ = \d+/).first()).toBeVisible();
-  await expect(bfs.getByText('Frontier', { exact: true }).first()).toBeVisible();
-  await expect(astar.getByText('Frontier', { exact: true }).first()).toBeVisible();
-  await checkA11y(page);
+  await next.click();
+  await expect(page.getByTestId('bfs-expanded')).toHaveText('1');
+  await expect(page.getByTestId('astar-expanded')).toHaveText('1');
+  await expect(bfs.getByRole('button', { name: /^#1\b.*A left 1\b/ })).toBeVisible();
+  await expect(astar.getByRole('button', { name: /^#4\b.*F down 2\b/ })).toBeVisible();
 
   await page.getByRole('button', { name: 'Boards', exact: true }).click();
   await expect(page.getByRole('img', { name: /^A\* current search state/ })).toBeVisible();
   await expect(page.getByTestId('astar-expanded')).toHaveText('1');
   await page.getByRole('button', { name: 'Search trees' }).click();
-  await page.getByRole('button', { name: 'Next step' }).click();
+  await next.click();
+  await expect(bfsPicker).toHaveValue('1');
+  await expect(astarPicker).toHaveValue('4');
   await expect(bfs.getByRole('list', { name: 'Moves from the starting position' })).toContainText('A left 1');
   await expect(astar.getByRole('list', { name: 'Moves from the starting position' })).toContainText('F down 2');
+  await expect(bfs.getByRole('img', { name: /^BFS position #1\b/ })).toHaveAccessibleName(/Vehicle A, horizontal, 2 cells, row A, column 2\b/);
+  await expect(astar.getByRole('img', { name: /^A\* position #4\b/ })).toHaveAccessibleName(/Vehicle F, vertical, 2 cells, row D, column 3\b/);
+  await checkA11y(page);
   await page.screenshot({ path: testInfo.outputPath('search-trees.png'), fullPage: true, animations: 'disabled' });
+
+  await bfs.getByRole('button', { name: /^#1\b.*A left 1\b/ }).focus();
+  await page.keyboard.press('Tab');
+  await expect(bfsPicker).toBeFocused();
+  await bfsStart.click();
+  await expect(bfsPicker).toHaveValue('0');
+  await expect(bfs.getByRole('img', { name: /^BFS position #0\b/ })).toHaveAccessibleName(/Vehicle A, horizontal, 2 cells, row A, column 3\b/);
+  await expect(astarPicker).toHaveValue('4');
+  await astarPicker.selectOption('1');
+  await expect(astar.getByRole('img', { name: /^A\* position #1\b/ })).toHaveAccessibleName(/Vehicle A, horizontal, 2 cells, row A, column 2\b/);
+  await expect(bfsPicker).toHaveValue('0');
+
+  const bfsWidth = (await bfsStart.boundingBox())!.width;
+  const astarWidth = (await astarStart.boundingBox())!.width;
+  await bfs.getByRole('button', { name: 'Zoom in', exact: true }).click();
+  await expect.poll(async () => (await bfsStart.boundingBox())?.width ?? 0).toBeGreaterThan(bfsWidth + 1);
+  const zoomedWidth = (await bfsStart.boundingBox())!.width;
+  expect((await astarStart.boundingBox())!.width).toBeCloseTo(astarWidth, 1);
+  await bfs.getByRole('button', { name: 'Zoom out', exact: true }).click();
+  await expect.poll(async () => (await bfsStart.boundingBox())?.width ?? zoomedWidth).toBeLessThan(zoomedWidth - 1);
+  await astar.getByRole('button', { name: 'Overview', exact: true }).click();
+
+  await expect(page.getByText('Search paused', { exact: true })).toBeVisible();
+  await expect(page.getByTestId('bfs-expanded')).toHaveText('2');
+  await expect(page.getByTestId('astar-expanded')).toHaveText('2');
+  await bfs.getByRole('button', { name: 'Follow current', exact: true }).click();
+  await astar.getByRole('button', { name: 'Follow current', exact: true }).click();
+  await expect(bfsPicker).toHaveValue('1');
+  await expect(astarPicker).toHaveValue('4');
+
   await page.getByRole('button', { name: 'Finish search' }).click();
+  await expect(page.getByText(/Both found a 4-move solution/)).toBeVisible();
   await expect(bfs.getByText('Path to the goal')).toBeVisible();
   await expect(astar.getByText('Path to the goal')).toBeVisible();
   await expect(bfs.getByText(/Showing the first 48 of/)).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Replay BFS solution' })).toBeEnabled();
+  await expect(page.getByRole('button', { name: 'Replay A* solution' })).toBeEnabled();
+});
+
+test('keeps a manually panned tree steady during playback and marks omitted parents', async ({ page }) => {
+  await openSite(page);
+  await page.getByLabel('Puzzle library').selectOption('expert-03');
+  await openSearch(page);
+  await page.getByRole('button', { name: 'Search trees' }).click();
+  const bfs = page.getByRole('region', { name: 'BFS search tree', exact: true });
+  const viewport = bfs.getByRole('region', { name: 'BFS diagram', exact: true });
+  const follow = bfs.getByRole('button', { name: 'Follow current' });
+  await page.getByRole('button', { name: 'Next step' }).click();
+  await expect(page.getByTestId('bfs-expanded')).toHaveText('1');
+  await expect(follow).toHaveAttribute('aria-pressed', 'true');
+
+  const pan = await viewport.evaluate((element) => {
+    element.scrollLeft = element.scrollLeft > 20 ? 0 : Math.min(80, element.scrollWidth - element.clientWidth);
+    return element.scrollLeft;
+  });
+  await expect(follow).toHaveAttribute('aria-pressed', 'false');
+  await page.getByLabel('Step speed').selectOption('200');
+  await page.getByRole('button', { name: 'Play', exact: true }).click();
+  await expect.poll(async () => Number(await page.getByTestId('bfs-expanded').textContent())).toBeGreaterThan(2);
+  await page.getByRole('button', { name: 'Pause', exact: true }).click();
+  expect(await viewport.evaluate((element) => element.scrollLeft)).toBe(pan);
+  await follow.click();
+  await expect(follow).toHaveAttribute('aria-pressed', 'true');
+  await expect.poll(() => viewport.evaluate((element) => {
+    const current = element.querySelector('[aria-current="step"]')?.getBoundingClientRect();
+    const box = element.getBoundingClientRect();
+    return Boolean(current && current.left >= box.left && current.right <= box.right
+      && current.top >= box.top && current.bottom <= box.bottom);
+  })).toBe(true);
+
+  await page.getByRole('button', { name: 'Finish search' }).click();
+  await expect(page.getByText(/Both found a 23-move solution/)).toBeVisible();
+  const astar = page.getByRole('region', { name: 'A* search tree', exact: true });
+  await expect(astar.getByText('Path to the goal')).toBeVisible();
+  await expect(astar.locator('.search-tree-stub').first()).toContainText(/outside sample/);
+  await expect(astar.locator('svg .search-tree-edge--stub').first()).toBeAttached();
+  expect(await astar.locator('.search-tree-node').count()).toBeLessThanOrEqual(64);
 });
 
 test.describe('touch and reduced motion', () => {
@@ -220,10 +302,20 @@ test.describe('touch and reduced motion', () => {
     await expect(page.getByTestId('astar-expanded')).toBeVisible();
     await page.screenshot({ path: testInfo.outputPath('mobile-search.png'), fullPage: true, animations: 'disabled' });
     await page.getByRole('button', { name: 'Search trees' }).tap();
-    await expect(page.getByRole('region', { name: 'A* search tree', exact: true })).toBeVisible();
-    await expect(page.getByRole('region', { name: 'BFS search tree', exact: true })).toBeHidden();
+    const astarTree = page.getByRole('region', { name: 'A* search tree', exact: true });
+    const bfsTree = page.getByRole('region', { name: 'BFS search tree', exact: true });
+    await expect(astarTree).toBeVisible();
+    await expect(bfsTree).toBeHidden();
+    await page.getByRole('button', { name: 'Next step' }).tap();
+    await expect(astarTree.getByRole('combobox', { name: 'Inspect a position' })).toHaveValue('4');
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390);
     await page.screenshot({ path: testInfo.outputPath('mobile-trees.png'), fullPage: true, animations: 'disabled' });
+    await page.getByRole('group', { name: 'Visible search' }).getByRole('button', { name: 'BFS', exact: true }).tap();
+    await expect(bfsTree).toBeVisible();
+    await expect(astarTree).toBeHidden();
+    await expect(bfsTree.getByRole('combobox', { name: 'Inspect a position' })).toHaveValue('1');
+    await expect(page.getByTestId('bfs-expanded')).toHaveText('2');
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(390);
 
     await page.getByRole('button', { name: 'Back to puzzle' }).tap();
     await page.getByRole('button', { name: 'Edit board' }).tap();

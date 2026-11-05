@@ -30,7 +30,7 @@ A slide of any legal distance is **one move**. Pieces stay in their own lane and
 - **A\*** prioritizes `g + h`: the moves already made plus an estimate of the moves still needed. The estimate is one for the target's final slide plus one for each distinct blocker in its exit lane; it is zero at the goal.
 - An **expansion** is a position whose legal successors were generated. The frontier contains discovered positions waiting to be considered. Live runtime excludes pauses, animation, and runtime startup. A time or state limit means the search stopped without deciding whether a solution exists.
 - **Search** shows positions the algorithms consider. **Replay** shows the actual solution moves.
-- The **Search trees** view shows how each algorithm reached its positions. It displays up to the first 48 discoveries and keeps the latest 16 nodes on the path to the current position visible during longer searches.
+- In **Search trees**, follow the active path or use **Overview** to see the recorded branches. Select a position to preview its board without changing the search. Each diagram shows up to the first 48 discoveries and the latest 16 positions on the active path.
 
 ## Verify and reproduce
 

@@ -17,6 +17,11 @@ def load_presets():
     return json.loads((ROOT / "src" / "data" / "presets.json").read_text(encoding="utf-8"))
 
 
+def board_anchors(board):
+    return [vehicle["col"] if vehicle["axis"] == "H" else vehicle["row"]
+            for vehicle in board["vehicles"]]
+
+
 def replay(board, moves):
     state = board.initial
     for move in moves:
@@ -199,7 +204,8 @@ class BridgeTests(unittest.TestCase):
             with self.subTest(algorithm):
                 initial = ready[algorithm]["tree"]
                 root = {"id": 0, "parentId": None, "move": None, "depth": 0,
-                        "h": 2 if algorithm == "astar" else None, "status": "active"}
+                        "h": 2 if algorithm == "astar" else None, "status": "active",
+                        "anchors": board_anchors(CLASSIC)}
                 self.assertEqual(initial, {"nodes": [root], "activeId": 0, "activePath": [root],
                                            "omittedAncestors": 0, "discovered": 1})
 
@@ -212,6 +218,7 @@ class BridgeTests(unittest.TestCase):
                                      (index, 0, 1, "frontier"))
                     state = replay(board, [node["move"]])
                     self.assertEqual(node["h"], board.heuristic(state) if algorithm == "astar" else None)
+                    self.assertEqual(node["anchors"], list(state))
 
         next_frames = json.loads(rushhour.advance(1))
         for frame in next_frames.values():
@@ -219,6 +226,7 @@ class BridgeTests(unittest.TestCase):
             self.assertNotEqual(tree["activeId"], 0)
             self.assertEqual(tree["nodes"][0]["status"], "expanded")
             self.assertEqual(tree["activePath"][-1]["status"], "active")
+            self.assertEqual(tree["activePath"][-1]["anchors"], board_anchors(frame["board"]))
 
     def test_tree_caps_keep_goal_ancestry_after_releasing_search_memory(self):
         expert = next(item for item in load_presets() if item["difficulty"] == "Expert")
@@ -240,7 +248,10 @@ class BridgeTests(unittest.TestCase):
                 self.assertEqual(tree["omittedAncestors"], frame["g"] + 1 - len(path))
                 self.assertEqual(path[-1]["id"], tree["activeId"])
                 self.assertEqual(path[-1]["status"], "goal")
+                self.assertEqual(path[-1]["anchors"], board_anchors(frame["board"]))
                 self.assertEqual([node["move"] for node in path], frame["moves"][-len(path):])
+                for node in path:
+                    self.assertEqual(node["anchors"], list(replay(board, frame["moves"][:node["depth"]])))
                 for parent, child in zip(path, path[1:]):
                     self.assertEqual(child["parentId"], parent["id"])
                     self.assertEqual(child["depth"], parent["depth"] + 1)
@@ -264,7 +275,9 @@ class BridgeTests(unittest.TestCase):
                 original = previous.get(identifier)
                 if original and original["parentId"] != node["parentId"]:
                     self.assertLess(node["depth"], original["depth"])
-                    self.assertEqual(sample_state(previous, original), sample_state(sampled, node))
+                    self.assertEqual(original["anchors"], list(sample_state(previous, original)))
+                    self.assertEqual(node["anchors"], list(sample_state(sampled, node)))
+                    self.assertEqual(original["anchors"], node["anchors"])
                     return
             previous = sampled
             engine.advance_one()

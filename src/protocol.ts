@@ -12,6 +12,7 @@ export type TreeNode = {
   depth: number;
   h: number | null;
   status: 'frontier' | 'expanded' | 'active' | 'goal';
+  anchors: number[];
 };
 
 export type SearchTrace = {

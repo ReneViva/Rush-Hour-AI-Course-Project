@@ -8,7 +8,7 @@
     "build": "node tools/prepare-assets.mjs && tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "typecheck": "tsc --noEmit",
-    "test": "node --test tests/model.test.ts && npm run test:python",
+    "test": "node --test tests/model.test.ts tests/searchTreeLayout.test.ts && npm run test:python",
     "test:python": "python -B -m unittest discover -s tests/python -v",
     "test:browser": "node tools/test-browser.mjs",
     "benchmark": "python -B tools/benchmark.py"

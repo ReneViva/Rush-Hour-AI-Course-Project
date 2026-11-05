@@ -161,52 +161,8 @@
 .search-tree { display: grid; gap: 0.65rem; min-inline-size: 0; }
 .search-tree-overview { min-block-size: 3.75rem; }
 .search-tree-overview h3 { font-size: 0.95rem; }
-.search-tree-overview p, .search-tree-count, .search-tree-hint { color: var(--muted); font-size: 0.77rem; line-height: 1.5; }
+.search-tree-overview p, .search-tree-count { color: var(--muted); font-size: 0.77rem; line-height: 1.5; }
 .search-tree-overview p { margin-block-start: 0.2rem; }
-.search-tree-hint { margin-block-start: 0.55rem; }
-
-.search-tree-viewport {
-  block-size: 15rem;
-  overflow: auto;
-  padding: 0.6rem;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 9px;
-  scrollbar-color: #788678 var(--paper);
-}
-
-.search-tree-list { margin: 0; padding-inline-start: 0.75rem; list-style: none; }
-.search-tree-list--root, .search-tree-list--tight { padding-inline-start: 0; }
-.search-tree-list .search-tree-list:not(.search-tree-list--root, .search-tree-list--tight) { border-inline-start: 1px solid #a5ad9a; margin-inline-start: 0.4rem; }
-.search-tree-node + .search-tree-node { margin-block-start: 0.2rem; }
-.search-tree-node > .search-tree-list { margin-block-start: 0.25rem; }
-
-.search-tree-entry {
-  position: relative;
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0.18rem 0.45rem;
-  padding: 0.27rem 0.4rem;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  font-size: 0.76rem;
-}
-
-.search-tree-list:not(.search-tree-list--root, .search-tree-list--tight) > .search-tree-node > .search-tree-entry::before {
-  content: '';
-  position: absolute;
-  inset-inline-end: 100%;
-  inset-block-start: 0.8rem;
-  width: 0.75rem;
-  border-block-start: 1px solid #a5ad9a;
-}
-
-.search-tree-node-id, .search-tree-node-cost { font-family: var(--mono); color: var(--muted); white-space: nowrap; }
-.search-tree-node-state { color: var(--muted); margin-inline-start: auto; }
-.search-tree-entry--active, .search-tree-entry--goal { background: var(--accent-tint); border-color: #879c86; }
-.search-tree-entry--active .search-tree-node-state, .search-tree-entry--goal .search-tree-node-state { color: var(--accent); font-weight: 800; }
-.search-tree-detached > span { display: block; margin-block: 0.4rem 0.2rem; color: var(--muted); font-size: 0.73rem; }
 
 .search-tree-path { border-block-start: 1px solid var(--line); padding-block-start: 0.55rem; font-size: 0.8rem; }
 .search-tree-path p span { color: var(--muted); margin-inline-start: 0.25rem; white-space: nowrap; }
